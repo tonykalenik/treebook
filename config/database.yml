@@ -46,10 +46,11 @@ development:
 test:
   adapter: postgresql
   encoding: unicode
-  database: treebook_test
+  database: test
   pool: 5
-  username: treebook
-  password:
+  username: postgres
+  password: 12345
+  port: 5433
 
 production:
   adapter: postgresql
