@@ -7,13 +7,15 @@ Treebook::Application.routes.draw do
     get 'logout', to: 'devise/sessions#destroy', as: :logout
   end
 
+
   resources :statuses
+  get 'feed' => 'statuses#index', as: :feed
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root :to => 'statuses#index'
+  root  'statuses#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
