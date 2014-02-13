@@ -6,4 +6,11 @@ class StatusTest < ActiveSupport::TestCase
     assert !status.save
     assert !status.errors[:content].empty?
   end
+
+  test 'that a status content is at least 2 letters' do
+    status = Status.new
+    status.content = 'H'
+    assert !status.save
+    assert !status.errors[:content].empty?
+  end
 end
