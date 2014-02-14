@@ -7,4 +7,9 @@ class ProfilesControllerTest < ActionController::TestCase
     assert_template 'profiles/show'
   end
 
+  test 'should render a 404 on profile not found' do
+    get :show, id: "doesn't exist"
+    assert_response :not_found
+  end
+
 end
