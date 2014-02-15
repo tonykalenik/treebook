@@ -7,6 +7,11 @@ gem 'rails', '4.0.0'
 gem 'pg'
 gem 'devise'
 gem 'simple_form'
+
+group :production do
+  gem "pg"
+end
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
 
